@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package api.protobuf;
+
+option go_package = "HelloProjectWithBalance/api/protobuf;hellopb";
+
+
+message HelloRequest {
+}
+
+message HelloResponse {
+  string pod = 1;
+}
+
+service HelloService {
+  rpc Hello(HelloRequest) returns (HelloResponse) {};
+};
+
+
